@@ -15,6 +15,7 @@ Please run with the command `streamlit run path/to/web_demo.py
 Using `python path/to/web_demo.py` may cause unknown problems.
 """
 # isort: skip_file
+import os
 import copy
 import warnings
 from dataclasses import asdict, dataclass
