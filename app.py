@@ -182,8 +182,9 @@ def on_btn_click():
 @st.cache_resource
 def load_model():
     base_path = './internlm2-chat-7b'
-    os.system(f'git clone https://code.openxlab.org.cn/OpenLMLab/internlm2-chat-7b.git {base_path}')
-    os.system(f'cd {base_path} && git lfs pull')
+    if not os.path.exists(base_path):
+        os.system(f'git clone https://code.openxlab.org.cn/milowang/selfassi_kw.git {base_path}')
+        os.system(f'cd {base_path} && git lfs pull')
     model = (AutoModelForCausalLM.from_pretrained(base_path,
                                                   trust_remote_code=True).to(
                                                       torch.bfloat16).cuda())
