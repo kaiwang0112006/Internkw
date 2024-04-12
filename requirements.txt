@@ -1,3 +1,4 @@
 sentencepiece
 streamlit
 transformers>=4.34
+einops
