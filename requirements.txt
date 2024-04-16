@@ -2,3 +2,4 @@ sentencepiece
 streamlit
 transformers>=4.34
 einops
+gradio==4.13.0
