@@ -9,11 +9,6 @@ base_path = './internlm2-chat-7b'
 if not os.path.exists(base_path):
     os.system(f'git clone https://code.openxlab.org.cn/milowang/selfassi_kw.git {base_path}')
     os.system(f'cd {base_path} && git lfs pull')
-model = (AutoModelForCausalLM.from_pretrained(base_path,
-                                              trust_remote_code=True).to(
-    torch.bfloat16).cuda())
-tokenizer = AutoTokenizer.from_pretrained(base_path,
-                                          trust_remote_code=True)
 
 #load transformers model
 tokenizer = AutoTokenizer.from_pretrained(base_path,trust_remote_code=True)
