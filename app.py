@@ -11,6 +11,7 @@ if not os.path.exists(base_path):
     os.system('apt install git-lfs')
     os.system("git lfs install")
     os.system(f'git clone https://code.openxlab.org.cn/milowang/selfassi_kw.git {base_path}')
+    os.system("git lfs install")
     os.system(f'cd {base_path} && git lfs pull')
 model = (AutoModelForCausalLM.from_pretrained(base_path,
                                               trust_remote_code=True).to(
