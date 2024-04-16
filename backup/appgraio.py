@@ -57,4 +57,4 @@ def predict(message, history):
             partial_message += new_token
             yield partial_message
 
-gr.ChatInterface(predict).launch(share=True)
+gr.ChatInterface(predict).launch()
