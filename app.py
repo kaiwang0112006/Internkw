@@ -5,7 +5,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, StoppingCriteria, 
 from threading import Thread
 import os
 
-base_path = './internlm2-chat-7b'
+base_path = './IELTS_essay_eval_7b_v1'
 if not os.path.exists(base_path):
     os.system('apt install git')
     os.system('apt install git-lfs')
