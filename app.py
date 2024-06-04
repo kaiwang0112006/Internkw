@@ -10,7 +10,7 @@ if not os.path.exists(base_path):
     os.system('apt install git')
     os.system('apt install git-lfs')
     os.system("git lfs install")
-    os.system(f'git clone https://code.openxlab.org.cn/milowang/selfassi_kw.git {base_path}')
+    os.system(f'git clone https://code.openxlab.org.cn/milowang/IELTS_essay_eval_7b_v1.git {base_path}')
     os.system("git lfs install")
     os.system(f'cd {base_path} && git lfs pull')
 
